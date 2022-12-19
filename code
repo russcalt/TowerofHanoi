@@ -1,0 +1,22 @@
+public class Tower
+{
+    public static void main(String[] args){
+        towerOfHanoi(10, 's', 't', 'a');
+    }
+    
+    static void towerOfHanoi(int n, char srcc, char targ, char auxx){
+        
+        if(n==0){
+            return;
+        }
+        else{
+        
+        towerOfHanoi(n-1, srcc, auxx, targ);
+        
+        System.out.println("Move disk " + n + " from " + srcc +
+        " to " + targ);
+        
+        towerOfHanoi( n-1, auxx, targ, srcc);
+        }
+    }
+}
